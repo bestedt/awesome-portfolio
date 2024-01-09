@@ -1,22 +1,44 @@
-export default function Portfolio() {
+// import React from 'react';
+import React from 'react';
+// impo the portfolio item component and the images for the projects
+import PortfolioItem from '../components/PortfolioItem'; 
+import project1Image from '../images/project1.png'; 
+import project2Image from '../images/project2.jpg'; 
+// adding styling to the portfolio page
+const Portfolio = () => {
+  const portfolioStyle = {
+    textAlign: 'center', // Center the container
+  };
+// adding the portfolio items to the page
   return (
-    <div>
+    <div style={portfolioStyle}>
+      <br />
+      <br />
       <h1>Portfolio</h1>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
+      <br />
+      <br />
+      {/* using the portforlio component and setting links to my github and actuall project */}
+      <PortfolioItem
+        image={project1Image}
+        projectName="Purple Turtle Entertainment"
+        projectLink="https://jizhang80.github.io/project1-purpleTurtle/"
+        githubLink="https://github.com/bestedt/project1-purpleTurtle"
+      />
+      <br />
+      <br />
+      <br />
+      {/* using the portforlio component and setting links to my github and actuall project */}
+      <PortfolioItem
+        image={project2Image}
+        projectName="Appartment Management System"
+        projectLink="https://atms-8bf7a9e2d4f1.herokuapp.com/"
+        githubLink="https://github.com/bestedt/purpleturtle-Appartment-Management?tab=readme-ov-file"
+      />
+      <br />
+      <br />
+      <br />
     </div>
   );
-}
+};
+// exporting the portfolio page
+export default Portfolio;
