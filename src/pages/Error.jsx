@@ -1,11 +1,12 @@
 import { useRouteError } from 'react-router-dom';
-
+// a basic error page that will display if there is an error
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
 
   return (
     <div id="error-page">
+      {/* error messgae if user gets an error on the page */}
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
